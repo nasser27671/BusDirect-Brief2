@@ -36,14 +36,14 @@
             <div
               id="seat-1"
               draggable="true"
-              class= "text-white font-semibold py-2 rounded text-center"
+              class= "text-white font-semibold py-2 rounded text-center bg-yellow-500"
             >
               1
             </div>
             <div
               id="seat-2"
               draggable="true"
-              class="text-white font-semibold py-2 rounded text-center"
+              class="text-white font-semibold py-2 rounded text-center bg-yellow-500"
             >
               2
             </div>
@@ -57,7 +57,7 @@
             <div
               id="seat-4"
               draggable="true"
-              class="bg-yellow-700 text-white font-semibold py-2 rounded text-center"
+              class="bg-yellow-500 text-white font-semibold py-2 rounded text-center"
             >
               4
             </div>
@@ -193,6 +193,10 @@
           <p>
             <span class="inline-block w-3 h-3 bg-red-700 rounded"></span>
             Occupé
+          </p>
+                    <p>
+            <span class="inline-block w-3 h-3 bg-yellow-500 rounded"></span>
+            VIP
           </p>
         </div>
       </div>
@@ -338,10 +342,23 @@
           </button>
 
           <p id="deleteMessage" class="mt-2 text-sm"></p>
+
+          <div>
+            <p class="underline font-bold">LISTE D'ATTENTE:</p>
+            <label>
+              <form>
+                <input id="waiting-list-input" class="rounded w-full p-2" type="input" placeholder="Saisir votre prénom:" >
+              </form>
+            </label>
+            <button id="waiting-list-add" class="rounded text-white w-full bg-blue-950 p-2">
+              Ajouter
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module"
+src="js/main-cabine.js"></script>
   </body>
 </html>

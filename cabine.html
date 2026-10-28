@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation-BusDirect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 p-3 sm:p-6">
+    <header
+      class="bg-blue-950 text-white p-3 sm:p-5 rounded-lg shadow-lg mb-6 text-center"
+    >
+      <h1 class="text-3xl font-bold">BusDirect - Reservation</h1>
+      <p class="text-lg underline">Trajet: Safi - Marrakech</p>
+      <p>Prix par ticket: 80 DH</p>
+      <p>Tickets Total: <span id="tickets-total">0</span></p>
+    </header>
+
+    <div class="flex flex-col md:flex-row gap-6">
+      <div
+        class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full md:max-w-md"
+      >
+        <div class="text-center mb-6">
+          <p class="text-white rounded bg-black font-bold text-lg">
+            Sieges Bus:
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-sm font-semibold text-blue-500 mb-2 underline">
+            Rangée 1
+          </p>
+
+          <div class="grid grid-cols-5 gap-2 sm:gap-2">
+            <div
+              id="seat-1"
+              draggable="true"
+              class= "text-white font-semibold py-2 rounded text-center"
+            >
+              1
+            </div>
+            <div
+              id="seat-2"
+              draggable="true"
+              class="text-white font-semibold py-2 rounded text-center"
+            >
+              2
+            </div>
+            <div
+              id="seat-3"
+              draggable="true"
+              class="text-white font-semibold py-2 rounded text-center"
+            >
+              3
+            </div>
+            <div
+              id="seat-4"
+              draggable="true"
+              class="bg-yellow-700 text-white font-semibold py-2 rounded text-center"
+            >
+              4
+            </div>
+            <div
+              id="seat-5"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              5
+            </div>
+            <div
+              id="seat-6"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              6
+            </div>
+            <div
+              id="seat-7"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              7
+            </div>
+            <div
+              id="seat-8"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              8
+            </div>
+            <div
+              id="seat-9"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              9
+            </div>
+            <div
+              id="seat-10"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              10
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-sm font-semibold text-blue-500 mb-2 underline">
+            Rangée 2
+          </p>
+
+          <div class="grid grid-cols-5 gap-2">
+            <div
+              id="seat-11"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              11
+            </div>
+            <div
+              id="seat-12"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              12
+            </div>
+            <div
+              id="seat-13"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              13
+            </div>
+            <div
+              id="seat-14"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              14
+            </div>
+            <div
+              id="seat-15"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              15
+            </div>
+            <div
+              id="seat-16"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              16
+            </div>
+            <div
+              id="seat-17"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              17
+            </div>
+            <div
+              id="seat-18"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              18
+            </div>
+            <div
+              id="seat-19"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              19
+            </div>
+            <div
+              id="seat-20"
+              draggable="true"
+              class="bg-gray-300 text-white font-semibold py-2 rounded text-center"
+            >
+              20
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-4 mt-6 text-sm">
+          <p>
+            <span class="inline-block w-3 h-3 bg-gray-300 rounded"></span>
+            Libre
+          </p>
+          <p>
+            <span class="inline-block w-3 h-3 bg-red-700 rounded"></span>
+            Occupé
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="bg-yellow-400 p-3 sm:p-6 rounded-lg shadow-lg w-full md:max-w-md"
+      >
+        <div class="mb-8">
+          <h2 class="font-bold underline mb-4">ADDITION D'UNE RESERVATION</h2>
+
+          <label for="reservation-name" class="font-bold block mb-2">
+            Prénom:
+          </label>
+
+          <input
+            id="reservation-name"
+            type="text"
+            placeholder="Saisir votre prénom:"
+            class="border p-2 rounded w-full mb-2"
+          />
+
+          <span id="nameError" class="text-red-700 text-sm"></span>
+
+          <label for="seat-number" class="font-bold block mt-3 mb-2">
+            Numéro du siège:
+          </label>
+
+          <select id="seat-number" class="border p-2 rounded w-full mb-3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select>
+
+          <button
+            id="submit-button"
+            type="button"
+            class="bg-blue-950 text-white p-2 rounded w-full"
+          >
+            Reserver mon siege
+          </button>
+
+          <p id="addMessage" class="mt-2 text-sm"></p>
+        </div>
+
+        <div class="mb-8">
+          <h2 class="font-bold underline mb-4">
+            MODIFICATION D'UNE RESERVATION
+          </h2>
+
+          <label for="modify-seat" class="font-bold block mb-2">
+            Choisir votre réservation:
+          </label>
+
+          <select id="modify-seat" class="border p-2 rounded w-full mb-3">
+            <option value="">Choisir votre prénom</option>
+          </select>
+
+          <label for="new-name" class="font-bold block mb-2">
+            Nouveau prénom:
+          </label>
+
+          <input
+            id="new-name"
+            type="text"
+            placeholder="Saisir le nouveau prénom:"
+            class="border p-2 rounded w-full mb-3"
+          />
+
+          <label for="new-seat" class="font-bold block mb-2">
+            Nouveau numéro du siège:
+          </label>
+
+          <select id="new-seat" class="border p-2 rounded w-full mb-3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select>
+
+          <button
+            id="modify-button"
+            type="button"
+            class="bg-blue-600 text-white p-2 rounded w-full"
+          >
+            Modifier la reservation
+          </button>
+
+          <p id="modifyMessage" class="mt-2 text-sm"></p>
+        </div>
+
+        <div>
+          <h2 class="font-bold underline mb-4">
+            SUPPRESSION D'UNE RESERVATION
+          </h2>
+
+          <label for="delete-seat" class="font-bold block mb-2">
+            Choisir une réservation:
+          </label>
+
+          <select id="delete-seat" class="border p-2 rounded w-full mb-3">
+            <option value="">Choisir une réservation</option>
+          </select>
+
+          <button
+            id="delete-button"
+            type="button"
+            class="bg-blue-950 text-white p-2 rounded w-full"
+          >
+            Supprimer ma reservation
+          </button>
+
+          <p id="deleteMessage" class="mt-2 text-sm"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

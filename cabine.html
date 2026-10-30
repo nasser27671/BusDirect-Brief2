@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -210,6 +210,7 @@
           <label for="reservation-name" class="font-bold block mb-2">
             Prénom:
           </label>
+   
 
           <input
             id="reservation-name"
@@ -217,6 +218,13 @@
             placeholder="Saisir votre prénom:"
             class="border p-2 rounded w-full mb-2"
           />
+
+            <label>
+              <h2 class="font-bold block mb-2">Numero de telephone:</h2>
+            <form>
+              <input type="tel" placeholder="Saisir votre nombre de telephone:" class="border p-2 rounded w-full mb-2 text-center">
+            </form>
+          </label>
 
           <span id="nameError" class="text-red-700 text-sm"></span>
 
@@ -347,7 +355,7 @@
             <p class="underline font-bold">LISTE D'ATTENTE:</p>
             <label>
               <form>
-                <input id="waiting-list-input" class="rounded w-full p-2" type="input" placeholder="Saisir votre prénom:" >
+                <input id="waiting-list-input" class="rounded w-full mb-2 p-2" type="input" placeholder="Saisir votre prénom:" >
               </form>
             </label>
             <button id="waiting-list-add" class="rounded text-white w-full bg-blue-950 p-2">

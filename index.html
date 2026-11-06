@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BusDirect - Trajets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-blue-950 text-white p-3 sm:p-5 rounded-lg shadow-lg mb-6 text-center">
+        <h1 class="text-3xl font-bold">BusDirect - Trajets</h1>
+        <nav>
+            <a class="underline flex justify-start" href="cabine.html">Cabine</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4">
+
+        <div class="flex justify-center mb-5">
+            <input
+                id="trajetSearch"
+                placeholder="Chercher un trajet"
+                class="rounded-xl w-full md:w-1/2 border p-2 text-center"
+                type="search"
+            />
+        </div>
+
+        <div class="flex justify-end mb-5">
+            <select id="filterTrajet" class="border rounded-lg p-2">
+                <option value="tous">Tous</option>
+                <option value="disponible">Disponible</option>
+                <option value="complet">Complet</option>
+            </select>
+        </div>
+
+        <p class="flex justify-center underline bg-purple-600 text-white text-lg border rounded-lg p-2">
+            Liste des trajets
+        </p>
+
+        <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
+        </div>
+
+        <div id="pagination" class="flex justify-center items-center gap-2 mt-6 mb-6">
+        </div>
+
+    </main>
+
+    <footer class="p-4 mt-6">
+    </footer>
+
+    <script type="module" src="js/main-trajets.js"></script>
+
+</body>
+</html>
